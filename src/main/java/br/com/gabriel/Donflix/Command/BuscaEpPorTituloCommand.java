@@ -19,7 +19,7 @@ public class BuscaEpPorTituloCommand implements Command{
         System.out.println("Digite o trecho do titulo do episodio!");
         var trechoTitulo = input.nextLine();
         Optional<Episodio> episodioBuscado = episodios.stream()
-                .filter(e -> e.getTitulo().contains(trechoTitulo))
+                .filter(e -> e.getTitulo().toLowerCase().contains(trechoTitulo.toLowerCase()))
                 .findFirst();
         if (episodioBuscado.isPresent()){
             System.out.println("Episodio encontrado!");
