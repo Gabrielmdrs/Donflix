@@ -1,6 +1,6 @@
 package br.com.gabriel.Donflix.Command;
 
-import br.com.gabriel.Donflix.domain.Episodio;
+import br.com.gabriel.Donflix.model.Episodio;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;

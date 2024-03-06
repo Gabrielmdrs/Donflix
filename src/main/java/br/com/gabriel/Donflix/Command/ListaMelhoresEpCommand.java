@@ -1,6 +1,6 @@
 package br.com.gabriel.Donflix.Command;
 
-import br.com.gabriel.Donflix.domain.Episodio;
+import br.com.gabriel.Donflix.model.Episodio;
 
 import java.util.ArrayList;
 import java.util.Comparator;

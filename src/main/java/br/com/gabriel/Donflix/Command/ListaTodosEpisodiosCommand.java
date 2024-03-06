@@ -1,9 +1,6 @@
 package br.com.gabriel.Donflix.Command;
 
-import br.com.gabriel.Donflix.domain.Episodio;
-import br.com.gabriel.Donflix.repository.SerieRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+import br.com.gabriel.Donflix.model.Episodio;
 
 import java.util.List;
 

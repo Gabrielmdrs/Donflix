@@ -1,7 +1,7 @@
 package br.com.gabriel.Donflix.main;
 
 import br.com.gabriel.Donflix.Command.*;
-import br.com.gabriel.Donflix.domain.Episodio;
+import br.com.gabriel.Donflix.model.Episodio;
 import br.com.gabriel.Donflix.repository.SerieRepository;
 import br.com.gabriel.Donflix.service.SerieService;
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class Principal {
                 opcaoEscolhida = input.nextInt();
                 if (opcaoEscolhida == 1){
                     serieService.buscaSerie();
-                    episodios = serieService.listarEpisodios();
+
 
                     while (opcaoEscolhida != 5) {
                         System.out.println("Qual opção gostaria?");

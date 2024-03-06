@@ -1,4 +1,4 @@
-package br.com.gabriel.Donflix.domain;
+package br.com.gabriel.Donflix.model;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

@@ -1,4 +1,4 @@
-package br.com.gabriel.Donflix.domain;
+package br.com.gabriel.Donflix.model;
 
 import jakarta.persistence.*;
 

@@ -1,8 +1,9 @@
 package br.com.gabriel.Donflix.repository;
 
-import br.com.gabriel.Donflix.domain.Categoria;
-import br.com.gabriel.Donflix.domain.Episodio;
-import br.com.gabriel.Donflix.domain.Serie;
+import br.com.gabriel.Donflix.DTO.EpisodioDTO;
+import br.com.gabriel.Donflix.model.Categoria;
+import br.com.gabriel.Donflix.model.Episodio;
+import br.com.gabriel.Donflix.model.Serie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -25,4 +26,13 @@ public interface SerieRepository extends JpaRepository<Serie, Long> {
     List<Episodio> buscaEpisodiosPorTrecho(String trechoEpisodio);
     @Query("SELECT e FROM Serie s JOIN s.episodios e WHERE s = :serie ORDER BY e.avaliacao DESC LIMIT 5")
     List<Episodio> top5Episodios(Serie serie);
+
+    @Query("SELECT s FROM Serie s " +
+            "JOIN s.episodios e " +
+            "GROUP BY s " +
+            "ORDER BY MAX(e.dataLancamento) DESC LIMIT 5")
+    List<Serie> encontrarEpisodiosMaisRecentes();
+    @Query("SELECT e FROM Serie s JOIN s.episodios e WHERE s.id = :id AND e.temporada = :temporada")
+    List<Episodio> obterEpisodiosPorTemporada(Long id, Long temporada);
+
 }

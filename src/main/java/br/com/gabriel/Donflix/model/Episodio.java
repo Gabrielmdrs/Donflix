@@ -1,5 +1,6 @@
-package br.com.gabriel.Donflix.domain;
+package br.com.gabriel.Donflix.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

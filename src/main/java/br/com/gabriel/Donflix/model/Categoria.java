@@ -1,4 +1,4 @@
-package br.com.gabriel.Donflix.domain;
+package br.com.gabriel.Donflix.model;
 
 public enum Categoria {
     ACAO("Action", "Ação"),
@@ -30,5 +30,4 @@ public enum Categoria {
         }
         throw new IllegalArgumentException("Nenhuma categoria encontrada para a string fornecida: " + text);
     }
-
 }
